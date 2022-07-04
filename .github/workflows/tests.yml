@@ -13,9 +13,6 @@ jobs:
         uses: actions/checkout@v1
       - name: Run tests
         uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm run start
       - name: Set result_url env var
         if: always()
         run: echo "result_url=http://mockbin.com/request" >> $GITHUB_ENV
